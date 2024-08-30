@@ -1,16 +1,29 @@
 {
   "name": "livesey-validation",
   "version": "1.0.0",
-  "description": "a lightweight and simple validation module for JavaScript",
+  "description": "A lightweight and simple validation module for JavaScript, providing essential utilities for data validation.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "npx eslint . --fix && node index.js"
   },
+  "keywords": [
+    "validation",
+    "javascript",
+    "module",
+    "data-validation",
+    "lightweight",
+    "simple",
+    "form-validation"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/livesey-finance"
+    "url": "https://github.com/livesey-finance/livesey-validation"
   },
+  "bugs": {
+    "url": "https://github.com/livesey-finance/livesey-validation/issues"
+  },
+  "homepage": "https://github.com/livesey-finance/livesey-validation#readme",
   "author": "hhuziuk",
   "license": "MIT",
   "devDependencies": {
