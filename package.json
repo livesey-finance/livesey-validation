@@ -1,6 +1,6 @@
 {
   "name": "livesey-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight and simple validation module for JavaScript, providing essential utilities for data validation.",
   "main": "index.js",
   "type": "module",
