@@ -234,15 +234,15 @@ We welcome contributions! If you encounter any bugs or have suggestions for impr
 
 ### Reporting Issues
 
-If you find a bug, please report it by opening an issue [here]().
+If you find a bug, please report it by opening an issue [here](https://github.com/livesey-finance/livesey-validation/issues).
 
 ### Code of Conduct
 
-Please adhere to our [Code of Conduct]() when contributing.
+Please adhere to our [Code of Conduct](https://github.com/livesey-finance/.github/blob/main/manifesto.md) when contributing.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]() file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/livesey-finance/livesey-validation/blob/main/LICENSE) file for details.
 
 ## Authors and Contacts
 * `Heorhii Huziuk` - Lead Developer - huziukwork@gmail.com
