@@ -91,4 +91,8 @@ export class Strings {
       throw new Error('❌ Value is not mobile UUID');
     }
   }
+
+  getValue() {
+    return this._value;
+  }
 }
