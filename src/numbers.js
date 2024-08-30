@@ -1,83 +1,90 @@
 export class Numbers {
 
+  constructor(value) {
+    this._value = value;
+  }
+
   static parseEnvValue(value) {
     const parsedValue = parseFloat(value);
     if (isNaN(parsedValue)) {
       throw new Error(`❌ Value "${value}" is not a valid number`);
     }
-    return parsedValue;
+    return new Numbers(parsedValue);
   }
 
-  static isInt(value) {
-    if (typeof value === 'number' && Number.isInteger(value)) {
+  isInt() {
+    if (typeof this._value === 'number' && Number.isInteger(this._value)) {
       return this;
     } else {
       throw new Error('❌ Value is not integer');
     }
   }
 
-  static isBigInt(value) {
-    if (typeof value.valueOf() === 'bigint') {
+  isBigInt() {
+    if (typeof this._value === 'bigint') {
       return this;
     } else {
       throw new Error('❌ Value is not bigint');
     }
   }
 
-  static isFloat(value) {
-    if (typeof value === 'number' && !Number.isInteger(value)) {
+  isFloat() {
+    if (typeof this._value === 'number' && !Number.isInteger(this._value)) {
       return this;
     } else {
       throw new Error('❌ Value is not float');
     }
   }
 
-  static isPositive(value) {
-    if (typeof value === 'number' && value > 0) {
+  isPositive() {
+    if (typeof this._value === 'number' && this._value > 0) {
       return this;
     } else {
       throw new Error('❌ Value is not positive (>)');
     }
   }
 
-  static isNonNegative(value) {
-    if (typeof value === 'number' && value >= 0) {
+  isNonNegative() {
+    if (typeof this._value === 'number' && this._value >= 0) {
       return this;
     } else {
       throw new Error('❌ Value is not non-negative (>=)');
     }
   }
 
-  static isNegative(value) {
-    if (typeof value === 'number' && value < 0) {
+  isNegative() {
+    if (typeof this._value === 'number' && this._value < 0) {
       return this;
     } else {
       throw new Error('❌ Value is not negative (<)');
     }
   }
 
-  static isNonPositive(value) {
-    if (typeof value === 'number' && value >= 0) {
+  isNonPositive() {
+    if (typeof this._value === 'number' && this._value <= 0) {
       return this;
     } else {
       throw new Error('❌ Value is not non-positive (<=)');
     }
   }
 
-  static isNaN(value) {
-    if (isNaN(value)) {
+  isNaN() {
+    if (isNaN(this._value)) {
       return this;
     } else {
       throw new Error('❌ Value is not NaN');
     }
   }
 
-  static isInfinity(value) {
-    const parsedValue = this.parseEnvValue(value);
-    if (parsedValue === Infinity || parsedValue === -Infinity) {
+  isInfinity() {
+    if (this._value === Infinity || this._value === -Infinity) {
       return this;
     } else {
       throw new Error('❌ Value is not Infinity');
     }
+  }
+
+  getValue() {
+    return this._value;
   }
 }
