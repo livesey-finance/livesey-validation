@@ -6,9 +6,6 @@ export class Numbers {
 
   static parseEnvValue(value) {
     const parsedValue = parseFloat(value);
-    if (isNaN(parsedValue)) {
-      throw new Error(`❌ Value "${value}" is not a valid number`);
-    }
     return new Numbers(parsedValue);
   }
 
@@ -69,7 +66,7 @@ export class Numbers {
   }
 
   isNaN() {
-    if (isNaN(this._value)) {
+    if (typeof this._value === 'number' && isNaN(this._value)) {
       return this;
     } else {
       throw new Error('❌ Value is not NaN');
